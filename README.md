@@ -10,5 +10,4 @@ https://hits.seeyoufarm.com
 
 </div>
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/
-api?username=city1616&show_icons=true&theme=tokyonight)](https://github.com/city1616/github-readme-stats)
+[![seungwoo's GitHub stats](https://github-readme-stats.vercel.app/api?username=city1616&show_icons=true&theme=tokyonight)](https://github.com/city1616/github-readme-stats)
