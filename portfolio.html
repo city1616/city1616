@@ -1,33 +1,1210 @@
-<!DOCTYPE html> 
-<html> 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PORTFOLIO</title>
-	<style>
-		.main-title {
-			font-family: 'Jeju Gothic', sans-serif;
-			opacity: 0.7;
-			text-align: center;
-			position: absolute;
-			margin: 0;
-			padding: 0;
-			top: 40%;
-			left: 50%;
-			-webkit-transform: translate3d(-50%, -50%, 0);
-			transform: translate3d(-50%, -50%, 0);
-		}
-		.main-title .title {
-			font-size: 6em;
-			letter-spacing: 0.1em;
-			color: #111;
-		}
-	</style>
-</head>
- 
-<body> 
-	<div class = "main-title">
-		<h1 class = "title">HELLO</h1> 
-	</div>
-</body>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>문승우 | 꾸준히 성장하는 개발자</title>
+    <style>
+      /* cspell:disable-file */
+      /* webkit printing magic: print all background colors */
+      html {
+        -webkit-print-color-adjust: exact;
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      @media only screen {
+        body {
+          margin: 2em auto;
+          max-width: 1200px;
+          color: rgb(55, 53, 47);
+        }
+      }
+
+      /* body {
+        line-height: 1.5;
+        white-space: pre-wrap;
+      } */
+
+      a,
+      a.visited {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      .pdf-relative-link-path {
+        font-size: 80%;
+        color: #444;
+      }
+
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0.75em;
+      }
+
+      h1 {
+        font-size: 1.875rem;
+        margin-top: 1.875rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-top: 1.25rem;
+      }
+
+      .source {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1.5em;
+        word-break: break-all;
+      }
+
+      .callout {
+        border-radius: 3px;
+        padding: 1rem;
+      }
+
+      figure {
+        margin: 1.25em 0;
+        page-break-inside: avoid;
+      }
+
+      figcaption {
+        opacity: 0.5;
+        font-size: 85%;
+        margin-top: 0.5em;
+      }
+
+      mark {
+        background-color: transparent;
+      }
+
+      .indented {
+        padding-left: 1.5em;
+      }
+
+      hr {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+        visibility: visible;
+        border: none;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      @media only print {
+        img {
+          max-height: 100vh;
+          object-fit: contain;
+        }
+      }
+
+      @page {
+        margin: 1in;
+      }
+
+      .collection-content {
+        font-size: 0.875rem;
+      }
+
+      .column-list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .column {
+        padding: 0 1em;
+      }
+
+      .column:first-child {
+        padding-left: 0;
+      }
+
+      .column:last-child {
+        padding-right: 0;
+      }
+
+      .table_of_contents-item {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        padding: 0.125rem;
+      }
+
+      .table_of_contents-indent-1 {
+        margin-left: 1.5rem;
+      }
+
+      .table_of_contents-indent-2 {
+        margin-left: 3rem;
+      }
+
+      .table_of_contents-indent-3 {
+        margin-left: 4.5rem;
+      }
+
+      .table_of_contents-link {
+        text-decoration: none;
+        opacity: 0.7;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid rgba(55, 53, 47, 0.09);
+        border-collapse: collapse;
+      }
+
+      table {
+        border-left: none;
+        border-right: none;
+      }
+
+      th,
+      td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+      }
+
+      th {
+        color: rgba(55, 53, 47, 0.6);
+      }
+
+      ol,
+      ul {
+        margin: 0;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+      }
+
+      li > ol:first-child,
+      li > ul:first-child {
+        margin-block-start: 0.6em;
+      }
+
+      ul > li {
+        list-style: disc;
+      }
+
+      ul.to-do-list {
+        padding-inline-start: 0;
+      }
+
+      ul.to-do-list > li {
+        list-style: none;
+      }
+
+      .to-do-children-checked {
+        text-decoration: line-through;
+        opacity: 0.375;
+      }
+
+      ul.toggle > li {
+        list-style: none;
+      }
+
+      ul {
+        padding-inline-start: 1.7em;
+      }
+
+      ul > li {
+        padding-left: 0.1em;
+      }
+
+      ol {
+        padding-inline-start: 1.6em;
+      }
+
+      ol > li {
+        padding-left: 0.2em;
+      }
+
+      .mono ol {
+        padding-inline-start: 2em;
+      }
+
+      .mono ol > li {
+        text-indent: -0.4em;
+      }
+
+      .toggle {
+        padding-inline-start: 0em;
+        list-style-type: none;
+      }
+
+      /* Indent toggle children */
+      .toggle > li > details {
+        padding-left: 1.7em;
+      }
+
+      .toggle > li > details > summary {
+        margin-left: -1.1em;
+      }
+
+      .selected-value {
+        display: inline-block;
+        padding: 0 0.5em;
+        background: rgba(206, 205, 202, 0.5);
+        border-radius: 3px;
+        margin-right: 0.5em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        white-space: nowrap;
+      }
+
+      .collection-title {
+        display: inline-block;
+        margin-right: 1em;
+      }
+
+      .page-description {
+        margin-bottom: 2em;
+      }
+
+      .simple-table {
+        margin-top: 1em;
+        font-size: 0.875rem;
+        empty-cells: show;
+      }
+      .simple-table td {
+        height: 29px;
+        min-width: 120px;
+      }
+
+      .simple-table th {
+        height: 29px;
+        min-width: 120px;
+      }
+
+      .simple-table-header-color {
+        background: rgb(247, 246, 243);
+        color: black;
+      }
+      .simple-table-header {
+        font-weight: 500;
+      }
+
+      time {
+        opacity: 0.5;
+      }
+
+      .icon {
+        display: inline-block;
+        max-width: 1.2em;
+        max-height: 1.2em;
+        text-decoration: none;
+        vertical-align: text-bottom;
+        margin-right: 0.5em;
+      }
+
+      img.icon {
+        border-radius: 3px;
+      }
+
+      .user-icon {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+      }
+
+      .user-icon-inner {
+        font-size: 0.8em;
+      }
+
+      .text-icon {
+        border: 1px solid #000;
+        text-align: center;
+      }
+
+      .page-cover-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        max-height: 30vh;
+      }
+
+      .page-header-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .page-header-icon-with-cover {
+        margin-top: -0.72em;
+        margin-left: 0.07em;
+      }
+
+      .page-header-icon img {
+        border-radius: 3px;
+      }
+
+      .link-to-page {
+        margin: 1em 0;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+      }
+
+      p > .user {
+        opacity: 0.5;
+      }
+
+      td > .user,
+      td > time {
+        white-space: nowrap;
+      }
+
+      input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 0.6em;
+        vertical-align: middle;
+      }
+
+      p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      .image {
+        border: none;
+        margin: 1.5em 0;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+      }
+
+      .code,
+      code {
+        background: rgba(135, 131, 120, 0.15);
+        border-radius: 3px;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        tab-size: 2;
+      }
+
+      code {
+        color: #eb5757;
+      }
+
+      .code {
+        padding: 1.5em 1em;
+      }
+
+      .code-wrap {
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+
+      .code > code {
+        background: none;
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+      }
+
+      blockquote {
+        font-size: 1.25em;
+        margin: 1em 0;
+        padding-left: 1em;
+        border-left: 3px solid rgb(55, 53, 47);
+      }
+
+      .bookmark {
+        text-decoration: none;
+        max-height: 8em;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+      }
+
+      .bookmark-title {
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 1.75em;
+        white-space: nowrap;
+      }
+
+      .bookmark-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .bookmark-info {
+        flex: 4 1 180px;
+        padding: 12px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .bookmark-image {
+        width: 33%;
+        flex: 1 1 180px;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        border-radius: 1px;
+      }
+
+      .bookmark-description {
+        color: rgba(55, 53, 47, 0.6);
+        font-size: 0.75em;
+        overflow: hidden;
+        max-height: 4.5em;
+        word-break: break-word;
+      }
+
+      .bookmark-href {
+        font-size: 0.75em;
+        margin-top: 0.25em;
+      }
+
+      .sans {
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+      .code {
+        font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+      }
+      .serif {
+        font-family: Lyon-Text, Georgia, ui-serif, serif;
+      }
+      .mono {
+        font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+      }
+      .pdf .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+          "Noto Color Emoji", "Noto Sans CJK JP";
+      }
+      .pdf:lang(zh-CN) .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+          "Noto Color Emoji", "Noto Sans CJK SC";
+      }
+      .pdf:lang(zh-TW) .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+          "Noto Color Emoji", "Noto Sans CJK TC";
+      }
+      .pdf:lang(ko-KR) .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+          "Noto Color Emoji", "Noto Sans CJK KR";
+      }
+      .pdf .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK JP";
+      }
+      .pdf:lang(zh-CN) .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK SC";
+      }
+      .pdf:lang(zh-TW) .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK TC";
+      }
+      .pdf:lang(ko-KR) .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK KR";
+      }
+      .pdf .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK JP";
+      }
+      .pdf:lang(zh-CN) .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK SC";
+      }
+      .pdf:lang(zh-TW) .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK TC";
+      }
+      .pdf:lang(ko-KR) .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji", "Noto Serif CJK KR";
+      }
+      .pdf .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK JP";
+      }
+      .pdf:lang(zh-CN) .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK SC";
+      }
+      .pdf:lang(zh-TW) .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK TC";
+      }
+      .pdf:lang(ko-KR) .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK KR";
+      }
+      .highlight-default {
+        color: rgba(55, 53, 47, 1);
+      }
+      .highlight-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+      }
+      .highlight-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+      }
+      .highlight-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+      }
+      .highlight-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+      }
+      .highlight-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+      }
+      .highlight-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+      }
+      .highlight-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+      }
+      .highlight-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+      }
+      .highlight-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+      }
+      .highlight-gray_background {
+        background: rgba(241, 241, 239, 1);
+      }
+      .highlight-brown_background {
+        background: rgba(244, 238, 238, 1);
+      }
+      .highlight-orange_background {
+        background: rgba(251, 236, 221, 1);
+      }
+      .highlight-yellow_background {
+        background: rgba(251, 243, 219, 1);
+      }
+      .highlight-teal_background {
+        background: rgba(237, 243, 236, 1);
+      }
+      .highlight-blue_background {
+        background: rgba(231, 243, 248, 1);
+      }
+      .highlight-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+      }
+      .highlight-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+      }
+      .highlight-red_background {
+        background: rgba(253, 235, 236, 1);
+      }
+      .block-color-default {
+        color: inherit;
+        fill: inherit;
+      }
+      .block-color-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+      }
+      .block-color-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+      }
+      .block-color-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+      }
+      .block-color-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+      }
+      .block-color-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+      }
+      .block-color-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+      }
+      .block-color-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+      }
+      .block-color-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+      }
+      .block-color-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+      }
+      .block-color-gray_background {
+        background: rgba(241, 241, 239, 1);
+      }
+      .block-color-brown_background {
+        background: rgba(244, 238, 238, 1);
+      }
+      .block-color-orange_background {
+        background: rgba(251, 236, 221, 1);
+      }
+      .block-color-yellow_background {
+        background: rgba(251, 243, 219, 1);
+      }
+      .block-color-teal_background {
+        background: rgba(237, 243, 236, 1);
+      }
+      .block-color-blue_background {
+        background: rgba(231, 243, 248, 1);
+      }
+      .block-color-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+      }
+      .block-color-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+      }
+      .block-color-red_background {
+        background: rgba(253, 235, 236, 1);
+      }
+      .select-value-color-interactiveBlue {
+        background-color: rgba(35, 131, 226, 0.07);
+      }
+      .select-value-color-pink {
+        background-color: rgba(245, 224, 233, 1);
+      }
+      .select-value-color-purple {
+        background-color: rgba(232, 222, 238, 1);
+      }
+      .select-value-color-green {
+        background-color: rgba(219, 237, 219, 1);
+      }
+      .select-value-color-gray {
+        background-color: rgba(227, 226, 224, 1);
+      }
+      .select-value-color-translucentGray {
+        background-color: rgba(255, 255, 255, 0.0375);
+      }
+      .select-value-color-orange {
+        background-color: rgba(250, 222, 201, 1);
+      }
+      .select-value-color-brown {
+        background-color: rgba(238, 224, 218, 1);
+      }
+      .select-value-color-red {
+        background-color: rgba(255, 226, 221, 1);
+      }
+      .select-value-color-yellow {
+        background-color: rgba(253, 236, 200, 1);
+      }
+      .select-value-color-blue {
+        background-color: rgba(211, 229, 239, 1);
+      }
+      .select-value-color-pageGlass {
+        background-color: undefined;
+      }
+      .select-value-color-washGlass {
+        background-color: undefined;
+      }
+
+      .checkbox {
+        display: inline-flex;
+        vertical-align: text-bottom;
+        width: 16;
+        height: 16;
+        background-size: 16px;
+        margin-left: 2px;
+        margin-right: 5px;
+      }
+
+      .checkbox-on {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+      }
+
+      .checkbox-off {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+      }
+    </style>
+  </head>
+  <body>
+    <article id="7891e3ed-cb49-49a2-97c1-76984f8d5566" class="page sans">
+      <header>
+        <div class="page-header-icon undefined"><span class="icon">🧑‍💻</span></div>
+        <h1 class="page-title">문승우 | 꾸준히 성장하는 개발자</h1>
+        <p class="page-description"></p>
+      </header>
+      <div class="page-body">
+        <div id="bd4eda14-d4a3-4e62-a257-ae180650668c" class="column-list">
+          <div id="67fd1337-e710-482f-afba-35169b6d854b" style="width: 25%" class="column">
+            <figure id="aea86f56-1d2a-4723-9d2b-ac585c68b9d2" class="image">
+              <a
+                href="%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%20%E1%84%81%E1%85%AE%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%92%E1%85%B5%20%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%207891e3edcb4949a297c176984f8d5566/IMG_0107.jpg"
+                ><img
+                  style="width: 1440px"
+                  src="%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%20%E1%84%81%E1%85%AE%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%92%E1%85%B5%20%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%207891e3edcb4949a297c176984f8d5566/IMG_0107.jpg"
+              /></a>
+            </figure>
+          </div>
+          <div id="eede8919-df85-484a-bce0-a996c0d0e3e1" style="width: 75%" class="column">
+            <h2 id="efd5b241-e709-4a07-96b8-a85ccf002b8a" class="">Profile</h2>
+            <ul id="56008c2b-a2af-4095-8434-16be534516fb" class="bulleted-list">
+              <li style="list-style-type: disc">Email | <span style="border-bottom: 0.05em solid">woocity16@gmail.com</span></li>
+            </ul>
+            <ul id="4ec04ab5-7770-443b-a4f8-1d9e2968093f" class="bulleted-list">
+              <li style="list-style-type: disc">Github | <a href="https://github.com/city1616">https://github.com/city1616</a></li>
+            </ul>
+            <ul id="5f7c9bb6-c113-4505-ab5b-235371177b65" class="bulleted-list">
+              <li style="list-style-type: disc">Phone | 010-9069-4023</li>
+            </ul>
+          </div>
+        </div>
+        <h1 id="2aeb4986-ea12-4bdb-b2a9-0b0acb4d51ef" class=""><strong>Back-End Developer</strong></h1>
+        <hr id="5004624c-641d-4588-a233-cc433f7c114b" />
+        <ul id="795f71dd-c37e-4b6b-a629-6a206a651351" class="bulleted-list">
+          <li style="list-style-type: disc">안녕하세요! 꾸준히 성장하는 개발자 문승우입니다.</li>
+        </ul>
+        <ul id="66f725a3-f47e-4c5b-9c46-22bc62887fcf" class="bulleted-list">
+          <li style="list-style-type: disc">사람들이 필요로 하는 것이 무엇인지 고민하려고 노력합니다.</li>
+        </ul>
+        <ul id="241c4db7-e880-424a-9826-fb5dab1b57bd" class="bulleted-list">
+          <li style="list-style-type: disc">저만의 페이스를 유지하기 위해 꾸준히 공부합니다.</li>
+        </ul>
+        <ul id="b4f3b949-88d7-43e8-8278-95cf9ae3ea76" class="bulleted-list">
+          <li style="list-style-type: disc">새로운 기술 또는 모르는 개념에 대해 꾸준히 공부합니다.</li>
+        </ul>
+        <ul id="8fc4925b-2e97-4529-a074-cc9ac0cdcadf" class="bulleted-list">
+          <li style="list-style-type: disc">깔끔하고 한눈에 보기 좋은 코드를 좋아합니다.</li>
+        </ul>
+        <h1 id="92eb9976-fd3b-440e-ada0-5944a30e4801" class="">🛠  Stacks</h1>
+        <hr id="10b43d8d-9266-417f-bfeb-e3c24da043d2" />
+        <p id="ef637a09-6bd3-49fc-9ab6-60c53d58f55f" class="">
+          <mark class="highlight-yellow_background"><strong>Java</strong></mark
+          ><strong> </strong>🟥🟥🟥⬜⬜
+        </p>
+        <ul id="0714624a-b3eb-4ad2-bcc4-db6f4e4a7949" class="bulleted-list">
+          <li style="list-style-type: disc">ES6+ 를 이해하고 이를 활용하여 소규모 프로젝트 진행가능</li>
+        </ul>
+        <ul id="433704b5-5fee-48b9-885a-c5d82a102d5d" class="bulleted-list">
+          <li style="list-style-type: disc">JS기반 프레임워크와 라이브러리 사용가능</li>
+        </ul>
+        <p id="5fa319ad-018a-48c7-bc3b-1318cbe618d4" class=""></p>
+        <p id="0956fbe2-450e-4607-8905-31330af2bb70" class="">
+          <mark class="highlight-yellow_background"><strong>Python</strong></mark
+          ><strong> </strong>🟥🟥🟥⬜⬜
+        </p>
+        <ul id="02351b77-fca0-4def-a9ba-27c9c4ab338b" class="bulleted-list">
+          <li style="list-style-type: disc">시각화 라이브러리 matplotlib, seaborn을 통한 데이터 시각화 및 분석 가능</li>
+        </ul>
+        <ul id="4151548a-5c7a-4f9d-90bf-9a1eb1512d91" class="bulleted-list">
+          <li style="list-style-type: disc">Tensorflow, Keras 등의 라이브러리를 활용한 머신러닝, 딥러닝 모델 구축 및 활용 가능</li>
+        </ul>
+        <ul id="a6462273-8950-4e17-96f9-bc52350fcdf1" class="bulleted-list">
+          <li style="list-style-type: disc">Django REST API 개발 가능</li>
+        </ul>
+        <p id="3f64e35e-b051-4dea-b72e-88dc6d2f9173" class=""></p>
+        <p id="3fb23755-8a8d-4e4c-a6ea-a6060375a6f3" class="">
+          <mark class="highlight-yellow_background"><strong>Vue.js</strong></mark
+          ><strong> </strong>🟥🟥⬜⬜⬜
+        </p>
+        <ul id="beb6338d-1967-4724-91d9-322b22b76cdd" class="bulleted-list">
+          <li style="list-style-type: disc">Life Cycle을 이해하고, Vuex, Vue-router 를 활용하여 소규모 프로젝트 진행 가능</li>
+        </ul>
+        <ul id="d07b1256-ca50-4cb2-a708-1ed2123f86cf" class="bulleted-list">
+          <li style="list-style-type: disc">컴포넌트 개념을 이해하고, 재사용을 위한 개발 가능</li>
+        </ul>
+        <p id="91628988-6014-4ace-a0ae-431845b417e0" class=""></p>
+        <p id="4cbc020b-5a95-4064-81de-5c80fc1bc1c0" class="">
+          <mark class="highlight-yellow_background"><strong>React</strong></mark
+          ><strong> </strong>🟥⬜⬜⬜⬜
+        </p>
+        <ul id="6ce3e99b-e057-4530-b005-e8ea4474c3d4" class="bulleted-list">
+          <li style="list-style-type: disc">recoil을 활용하여 소규모 프로젝트 진행 가능</li>
+        </ul>
+        <ul id="443c136f-4efe-4725-baea-4b4acce8e96a" class="bulleted-list">
+          <li style="list-style-type: disc">컴포넌트 개념을 이해하고, 재사용을 위한 개발 가능</li>
+        </ul>
+        <h1 id="3ca959f8-06db-4f1b-bbda-0d855e31ec89" class="">👨🏻‍💻 Project Summary</h1>
+        <hr id="e008074a-e231-432f-b3fa-b87be8c603c2" />
+        <div id="e8d34e96-5be1-4443-901e-cf65e762cf67" class="column-list">
+          <div id="2c1a96a3-d353-4db7-8026-51da258f6d73" style="width: 37.5%" class="column">
+            <h2 id="2f73aee0-fb51-4ef4-8464-fc92d61a42c2" class="">LiCa Insight</h2>
+            <p id="720b3b9e-4ec2-42ff-b4c6-f0f9891b4040" class="">2023.04 ~ 2023.05</p>
+          </div>
+          <div id="bac695e2-bec8-423c-ba68-7288ac300f66" style="width: 62.5%" class="column">
+            <ul id="9515a328-8d36-4c0a-a88a-92164575aa5d" class="bulleted-list">
+              <li style="list-style-type: disc">고객 동선 데이터 시각화 웹 IoT 서비스</li>
+            </ul>
+            <ul id="c0ee54cf-9450-4391-80e2-7b39afeaf3cd" class="bulleted-list">
+              <li style="list-style-type: disc">MOT(Multiple Object Tracking) 모델을 활용해 사람의 bounding box 좌표 추출</li>
+            </ul>
+            <ul id="024be89c-732f-4344-bdfb-37292ceaeb07" class="bulleted-list">
+              <li style="list-style-type: disc">OpenCV를 활용해 카메라 캘리브레이션을 하여 카메라의 내부, 외부 파라미터 추출</li>
+            </ul>
+            <ul id="4eda002f-c7a7-4652-9ad8-0b31fe7c82eb" class="bulleted-list">
+              <li style="list-style-type: disc">카메라 상의 2차원 좌표를 3차원 좌표로 변환</li>
+            </ul>
+            <ul id="4ea4a9a8-ab1a-4442-9629-d74009526792" class="bulleted-list">
+              <li style="list-style-type: disc">Heatmap, Scatter Graph 페이지 구현</li>
+            </ul>
+          </div>
+        </div>
+        <div id="9618e6f6-2713-479d-b8b4-da16b594f701" class="column-list">
+          <div id="025595b7-f504-42a6-aaf8-52cd74df1054" style="width: 37.5%" class="column">
+            <h2 id="4d4597c3-f0f1-47e4-b698-cfc2f11bec0e" class="">MMIXX</h2>
+            <p id="b71ccdbd-cbbf-4da3-9b2a-3b20a72db61b" class="">2023.02 ~ 2023.04</p>
+          </div>
+          <div id="a7964954-768a-41b7-b86b-54547da4fc5b" style="width: 62.5%" class="column">
+            <ul id="0fe8ae5b-bafb-46b6-a287-4bfd5387e374" class="bulleted-list">
+              <li style="list-style-type: disc">딥러닝 기반의 음악 믹싱 웹 어플리케이션</li>
+            </ul>
+            <ul id="0454bcbd-2779-43a6-9482-45873bfff8d2" class="bulleted-list">
+              <li style="list-style-type: disc">DeepAFx-ST 모델을 활용해 사용자가 선택한 음악의 스타일 변환 API 구현</li>
+            </ul>
+            <ul id="d6753931-aaa3-4e13-a83a-d33e7e1f2748" class="bulleted-list">
+              <li style="list-style-type: disc">Spleeter 라이브러리를 활용해 사용자가 선택한 음악의 보컬 제거 API 구현</li>
+            </ul>
+            <ul id="ac595f39-c570-43c9-96af-3242ebdd15ce" class="bulleted-list">
+              <li style="list-style-type: disc">docker로 자동배포 되도록 Jenkins Pipeline 구축</li>
+            </ul>
+          </div>
+        </div>
+        <div id="7e2dadfa-9864-422e-a93a-acf92578f4eb" class="column-list">
+          <div id="a0a15314-42c1-4800-a36e-fc65737a34db" style="width: 37.5%" class="column">
+            <h2 id="fa914aef-5535-4400-ae1f-7e9805fe3b7d" class="">SSC</h2>
+            <p id="cd9a883a-60e8-41de-a727-79321c01d826" class="">Smart Shopping Cart</p>
+            <p id="209d25c2-ac68-44be-a7c1-fe55cf19248b" class="">2023.01 ~ 2023.03</p>
+          </div>
+          <div id="d9481408-9bc4-482b-80c0-64654a59b21a" style="width: 62.5%" class="column">
+            <ul id="1589e338-f50b-4489-a553-e9bf5f40da0b" class="bulleted-list">
+              <li style="list-style-type: disc">디스플레이가 탑재된 스마트 쇼핑 카트</li>
+            </ul>
+            <ul id="e8162c26-5d03-4e3a-b80a-ca7d64e47018" class="bulleted-list">
+              <li style="list-style-type: disc">회원, 상품, 장바구니 등 관련 API 개발</li>
+            </ul>
+            <ul id="36486736-975e-4eb0-8487-e65a76272b60" class="bulleted-list">
+              <li style="list-style-type: disc">ERD 설계 및 DB 구축</li>
+            </ul>
+            <ul id="ad4c5fc4-644e-42c0-9647-675ebc758e64" class="bulleted-list">
+              <li style="list-style-type: disc">Jenkins, Docker, Nginx를 통한 CI/CD 환경 구축</li>
+            </ul>
+          </div>
+        </div>
+        <div id="6eb96f2a-ec14-4764-b1c4-e1f6e8ab800a" class="column-list">
+          <div id="ee5137d8-d3c2-4359-9aad-79ac9e228bc3" style="width: 37.5%" class="column">
+            <h2 id="0e32dd1d-9481-45e6-96ef-dff42a057a0f" class="">아파트 매매 정보 검색 커뮤니티</h2>
+            <p id="ee30e641-26bc-45ee-b6bf-bbffdfa103f6" class="">2022.11 ~ 2022.11</p>
+          </div>
+          <div id="0f0bb722-824c-4106-ad89-9f95d5f12c55" style="width: 62.5%" class="column">
+            <ul id="cd05c055-b840-4491-8276-56eb687caf2d" class="bulleted-list">
+              <li style="list-style-type: disc">아파트 매매 정보를 조회 및 확인하고 소통할 수 있는 홈페이지</li>
+            </ul>
+            <ul id="badcac36-1e8f-484f-84ae-8d46691132ba" class="bulleted-list">
+              <li style="list-style-type: disc">회원, 아파트 매매 정보 등 관련 API 개발</li>
+            </ul>
+            <ul id="45bea745-1b3e-4bba-a5b0-e2b5499e9169" class="bulleted-list">
+              <li style="list-style-type: disc">Vue.js를 활용한 홈페이지 개발</li>
+            </ul>
+          </div>
+        </div>
+        <div id="197ee17a-59d5-4ea1-bb46-72314440f9fa" class="column-list">
+          <div id="6283201f-3af0-4f1c-a453-267c0ecce5df" style="width: 37.5%" class="column">
+            <h2 id="6a69448e-e651-4ee3-ae82-eef6baa52192" class="">가스공급량 수요예측 모델 개발</h2>
+            <p id="5091c9ad-566b-4062-b4e4-e34c4baa7b67" class="">2021.10 ~ 2021.11</p>
+          </div>
+          <div id="b721cdb1-e87b-48fa-ba8f-dc466b415cfa" style="width: 62.5%" class="column">
+            <ul id="8557356b-0609-45f7-91b9-1790cf02bec9" class="bulleted-list">
+              <li style="list-style-type: disc">가스 공급량을 예측하는 머신러닝 모델 구축 및 평가</li>
+            </ul>
+            <ul id="7a5e3eb2-ceeb-4a0e-be0a-24201a85264b" class="bulleted-list">
+              <li style="list-style-type: disc">가스 공급량을 예측하는 머신러닝 모델 개발</li>
+            </ul>
+            <ul id="a37b061f-6464-40cd-8f82-cfce8a3ec3fc" class="bulleted-list">
+              <li style="list-style-type: disc">시각화 라이브러리인 matplotlib과 seaborn을 사용하여 데이터 시각화 하여 분석</li>
+            </ul>
+          </div>
+        </div>
+        <div id="d7cc0e07-78fa-4a8d-8185-c6cf33d88eeb" class="column-list">
+          <div id="99bf9462-ebbf-44b5-9875-c3c06571d6e8" style="width: 37.5%" class="column">
+            <h2 id="45aa5c97-5226-41fd-96b7-c5e07a78c934" class="">코로나 확진자와 일상 생활 지표와의 상관관계 분석</h2>
+            <p id="429de309-f54e-43d2-a6c9-3645614ef638" class="">2021.09 ~ 2021.10</p>
+          </div>
+          <div id="17cf9e2a-9462-4015-916a-4a8bf10baf48" style="width: 62.5%" class="column">
+            <ul id="b50a2ce7-22cf-42de-bd9a-b17f689f9353" class="bulleted-list">
+              <li style="list-style-type: disc">코로나 확진자와 일상 생활 지표(비트코인, 주식, 뉴스 등)와의 상관관계 분석</li>
+            </ul>
+            <ul id="e16606f5-2498-4b4c-87fe-a75f9a1a70a1" class="bulleted-list">
+              <li style="list-style-type: disc">공공데이터포털 API를 활용해 코로나 일일 확진자 수 데이터 수집</li>
+            </ul>
+            <ul id="a2cf43d1-dd0b-486e-8fb6-42876b9bcff5" class="bulleted-list">
+              <li style="list-style-type: disc">bs4, selenium을 사용해 뉴스 데이터 수집</li>
+            </ul>
+            <ul id="18bc3b00-99de-45ae-b895-0828ad3cc7b5" class="bulleted-list">
+              <li style="list-style-type: disc">matplotlib, seaborn을 활용한 데이터 분석 및 시각화</li>
+            </ul>
+          </div>
+        </div>
+        <div id="a51f2785-4ce0-4b74-986e-84c34a1c84a8" class="column-list">
+          <div id="286d55ca-0664-4601-aa69-bdf289881ab8" style="width: 37.5%" class="column">
+            <h2 id="09675a94-a11f-4a79-89cd-509440a83c26" class="">MYC</h2>
+            <p id="204e8973-425f-47c0-81b7-846d21cccadb" class="">Make Your Chord</p>
+            <p id="45a97090-6ea4-48e8-8f42-954974e781ef" class="">2021.03 ~ 2021.06</p>
+          </div>
+          <div id="8a0a2021-77c4-4395-84e5-7736eeabe883" style="width: 62.5%" class="column">
+            <ul id="60cf8abe-6a8b-404f-b3ec-6e05fa4ddbd9" class="bulleted-list">
+              <li style="list-style-type: disc">음원 데이터를 딥러닝 모델을 통해 분석한 후 악보 를 제공해주는 앱</li>
+            </ul>
+            <ul id="e4056c7d-d983-4afa-95f9-cd1d7dd2dc28" class="bulleted-list">
+              <li style="list-style-type: disc">8개의 단일음 구분하는 딥러닝 모델 생성(Tensorflow, Keras)</li>
+            </ul>
+            <ul id="2d5571c8-9cac-4833-acc9-a3c2cff8fc73" class="bulleted-list">
+              <li style="list-style-type: disc">SwiftUI 사용해 iOS 앱 개발</li>
+            </ul>
+            <ul id="2022bb85-88eb-4ea6-b110-f6579b02b9b8" class="bulleted-list">
+              <li style="list-style-type: disc">midi파일을 pdf 악보 파일로 추출 및 제공</li>
+            </ul>
+            <ul id="3f572207-3eca-4405-b32c-abe138fa7c86" class="bulleted-list">
+              <li style="list-style-type: disc">사용자 요청을 확인할 수 있는 php 서버 구축</li>
+            </ul>
+          </div>
+        </div>
+        <h2 id="7e3fb4c7-fc1c-4c1c-a177-045fdbef70b7" class="">✨ Projects</h2>
+        <p id="46244833-df1e-4944-9493-edd97e1f1247" class="">
+          <mark class="highlight-teal"
+            ><strong><code>※ 카드를 누르면 상세 내용을 확인하실 수 있습니다. </code></strong></mark
+          >
+        </p>
+        <hr id="1ca98bed-7a6d-40c7-b248-52b7ea04acea" />
+        <div id="cb22b8c8-ffd9-4b23-9197-416500ab4fcc" class="collection-content">
+          <h4 class="collection-title">승우’s 프로젝트</h4>
+          <table class="collection-content">
+            <thead>
+              <tr>
+                <th>
+                  <span class="icon property-icon"
+                    ><svg viewBox="0 0 16 16" style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0; -webkit-backface-visibility: hidden" class="typesTitle">
+                      <path
+                        d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span
+                  >서비스명
+                </th>
+                <th>
+                  <span class="icon property-icon"
+                    ><svg viewBox="0 0 16 16" style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0; -webkit-backface-visibility: hidden" class="typesSelect">
+                      <path
+                        d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span
+                  >관련 활동
+                </th>
+                <th>
+                  <span class="icon property-icon"
+                    ><svg
+                      viewBox="0 0 16 16"
+                      style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0; -webkit-backface-visibility: hidden"
+                      class="typesMultipleSelect">
+                      <path
+                        d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span
+                  >담당 Skills &amp; 사용 Libraries
+                </th>
+                <th>
+                  <span class="icon property-icon"
+                    ><svg viewBox="0 0 16 16" style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0; -webkit-backface-visibility: hidden" class="typesText">
+                      <path
+                        d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span
+                  >담당역할
+                </th>
+                <th>
+                  <span class="icon property-icon"
+                    ><svg viewBox="0 0 16 16" style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0; -webkit-backface-visibility: hidden" class="typesDate">
+                      <path
+                        d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span
+                  >진행 기간
+                </th>
+                <th>
+                  <span class="icon property-icon"
+                    ><svg viewBox="0 0 16 16" style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0; -webkit-backface-visibility: hidden" class="typesText">
+                      <path
+                        d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span
+                  >팀 구성
+                </th>
+                <th>
+                  <span class="icon property-icon"
+                    ><svg viewBox="0 0 16 16" style="width: 14px; height: 14px; display: block; fill: rgba(55, 53, 47, 0.45); flex-shrink: 0; -webkit-backface-visibility: hidden" class="typesText">
+                      <path
+                        d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span
+                  >한 줄 소개
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="3639d0a3-8e99-451e-8761-7daae9274e92">
+                <td class="cell-title">
+                  <a href="https://www.notion.so/LiCa-Insight-3639d0a38e99451e87617daae9274e92?pvs=21"
+                    ><img
+                      class="icon"
+                      src="%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%20%E1%84%81%E1%85%AE%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%92%E1%85%B5%20%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%207891e3edcb4949a297c176984f8d5566/%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%E2%80%99s%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20cb22b8c8ffd94b239197416500ab4fcc/LiCa%20Insight%203639d0a38e99451e87617daae9274e92/footprint.png" />LiCa
+                    Insight</a
+                  >
+                </td>
+                <td class="cell-?BRU"><span class="selected-value select-value-color-blue">SSAFY</span></td>
+                <td class="cell-hHO{">
+                  <span class="selected-value select-value-color-blue">Next.js</span><span class="selected-value select-value-color-purple">Python</span
+                  ><span class="selected-value select-value-color-blue">React</span><span class="selected-value select-value-color-blue">TypeScript</span>
+                </td>
+                <td class="cell-htSi">FE, AI</td>
+                <td class="cell-ZJjp"><time>@April 10, 2023 → May 19, 2023</time></td>
+                <td class="cell-YqAX">5명 → Frontend 2명, Backend 2명, Embedded 1명</td>
+                <td class="cell-|_EQ">고객 동선 데이터 시각화 웹 IoT 서비스</td>
+              </tr>
+              <tr id="f96f0ba3-c87c-4ca5-9978-adc770eb3620">
+                <td class="cell-title">
+                  <a href="https://www.notion.so/MMIXX-f96f0ba3c87c4ca59978adc770eb3620?pvs=21"
+                    ><img
+                      class="icon"
+                      src="%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%20%E1%84%81%E1%85%AE%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%92%E1%85%B5%20%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%207891e3edcb4949a297c176984f8d5566/%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%E2%80%99s%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20cb22b8c8ffd94b239197416500ab4fcc/MMIXX%20f96f0ba3c87c4ca59978adc770eb3620/logo_yellow.png" />MMIXX</a
+                  >
+                </td>
+                <td class="cell-?BRU"><span class="selected-value select-value-color-blue">SSAFY</span></td>
+                <td class="cell-hHO{">
+                  <span class="selected-value select-value-color-blue">Docker</span><span class="selected-value select-value-color-green">JAVA</span
+                  ><span class="selected-value select-value-color-orange">Jenkins</span><span class="selected-value select-value-color-pink">MySQL</span
+                  ><span class="selected-value select-value-color-green">Nginx</span><span class="selected-value select-value-color-purple">Python</span>
+                </td>
+                <td class="cell-htSi">AI, BE, CI/CD</td>
+                <td class="cell-ZJjp"><time>@February 20, 2023 → April 7, 2023</time></td>
+                <td class="cell-YqAX">6명 → Frontend &amp; Backend 3명, AI &amp; Backend 3명</td>
+                <td class="cell-|_EQ">딥러닝 기반의 음악 믹싱 웹 어플리케이션</td>
+              </tr>
+              <tr id="506c7a86-b00d-495f-86fd-c176323dbd37">
+                <td class="cell-title">
+                  <a href="https://www.notion.so/SSC-Smart-Shopping-Cart-506c7a86b00d495f86fdc176323dbd37?pvs=21"
+                    ><img
+                      class="icon"
+                      src="%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%20%E1%84%81%E1%85%AE%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%92%E1%85%B5%20%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A1%207891e3edcb4949a297c176984f8d5566/%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%AE%E2%80%99s%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20cb22b8c8ffd94b239197416500ab4fcc/SSC(Smart%20Shopping%20Cart)%20506c7a86b00d495f86fdc176323dbd37/android-icon-192x192.png" />SSC(Smart
+                    Shopping Cart)</a
+                  >
+                </td>
+                <td class="cell-?BRU"><span class="selected-value select-value-color-blue">SSAFY</span></td>
+                <td class="cell-hHO{">
+                  <span class="selected-value select-value-color-blue">Docker</span><span class="selected-value select-value-color-green">JAVA</span
+                  ><span class="selected-value select-value-color-orange">Jenkins</span><span class="selected-value select-value-color-pink">MariaDB</span
+                  ><span class="selected-value select-value-color-green">Nginx</span>
+                </td>
+                <td class="cell-htSi">BE리드, CI/CD</td>
+                <td class="cell-ZJjp"><time>@January 3, 2023 → February 17, 2023</time></td>
+                <td class="cell-YqAX">6명 → Front-End 2명, Back-End 1명, Embedded 3명</td>
+                <td class="cell-|_EQ">디스플레이가 탑재된 스마트 쇼핑 카트</td>
+              </tr>
+              <tr id="a4068018-3ad8-4257-a3ef-99ed731f8787">
+                <td class="cell-title"><a href="https://www.notion.so/a40680183ad84257a3ef99ed731f8787?pvs=21">아파트 매매 정보 검색 커뮤니티</a></td>
+                <td class="cell-?BRU"><span class="selected-value select-value-color-blue">SSAFY</span></td>
+                <td class="cell-hHO{">
+                  <span class="selected-value select-value-color-green">JAVA</span><span class="selected-value select-value-color-green">JavaScript</span
+                  ><span class="selected-value select-value-color-red">Vue.js</span>
+                </td>
+                <td class="cell-htSi">BE리드, FE리드</td>
+                <td class="cell-ZJjp"><time>@November 17, 2022 → November 24, 2022</time></td>
+                <td class="cell-YqAX">2명</td>
+                <td class="cell-|_EQ">아파트 매매 정보를 조회 및 확인하고 소통할 수 있는 홈페이지</td>
+              </tr>
+              <tr id="1d3088e8-0f2d-445f-8f15-07ae768e573e">
+                <td class="cell-title"><a href="https://www.notion.so/1d3088e80f2d445f8f1507ae768e573e?pvs=21">가스공급량 수요예측 모델개발</a></td>
+                <td class="cell-?BRU"><span class="selected-value select-value-color-green">멋쟁이사자처럼</span></td>
+                <td class="cell-hHO{"><span class="selected-value select-value-color-purple">Python</span><span class="selected-value select-value-color-brown">Scikit-learn</span></td>
+                <td class="cell-htSi">AI리드</td>
+                <td class="cell-ZJjp"><time>@October 15, 2021 → November 10, 2021</time></td>
+                <td class="cell-YqAX"></td>
+                <td class="cell-|_EQ">가스 공급량을 예측하는 머신러닝 모델 구축 및 평가</td>
+              </tr>
+              <tr id="6eb31ae4-72d5-47b5-bdcd-941f2e1452ea">
+                <td class="cell-title"><a href="https://www.notion.so/6eb31ae472d547b5bdcd941f2e1452ea?pvs=21">코로나 확진자와 일상 생활 지표와의 상관관계 분석</a></td>
+                <td class="cell-?BRU"><span class="selected-value select-value-color-green">멋쟁이사자처럼</span></td>
+                <td class="cell-hHO{">
+                  <span class="selected-value select-value-color-yellow">Matplotlib</span><span class="selected-value select-value-color-yellow">Pandas</span
+                  ><span class="selected-value select-value-color-purple">Python</span>
+                </td>
+                <td class="cell-htSi">데이터 수집 및 전처리, 데이터 분석 및 시각화</td>
+                <td class="cell-ZJjp"><time>@September 17, 2021 → October 8, 2021</time></td>
+                <td class="cell-YqAX"></td>
+                <td class="cell-|_EQ">코로나 확진자와 일상 생활 지표(비트코인, 주식, 뉴스 등)와의 상관관계 분석</td>
+              </tr>
+              <tr id="e842becc-d6ab-4be5-a696-7649ce75eea4">
+                <td class="cell-title"><a href="https://www.notion.so/MYC-Make-Your-Chord-e842beccd6ab4be5a6967649ce75eea4?pvs=21">MYC(Make Your Chord)</a></td>
+                <td class="cell-?BRU"><span class="selected-value select-value-color-purple">대학교</span></td>
+                <td class="cell-hHO{">
+                  <span class="selected-value select-value-color-gray">PHP</span><span class="selected-value select-value-color-purple">Python</span
+                  ><span class="selected-value select-value-color-red">Swift</span><span class="selected-value select-value-color-yellow">TensorFlow</span>
+                </td>
+                <td class="cell-htSi">AI리드, 앱리드</td>
+                <td class="cell-ZJjp"><time>@March 5, 2021 → June 18, 2021</time></td>
+                <td class="cell-YqAX">2명</td>
+                <td class="cell-|_EQ">음원 데이터를 딥러닝 모델을 통해 분석한 후 악보 를 제공해주는 앱</td>
+              </tr>
+            </tbody>
+          </table>
+          <br /><br />
+        </div>
+        <h1 id="341b3c56-e361-4331-a23f-123412040c30" class="">🎓 EXPERIENCE</h1>
+        <hr id="bed75f50-c980-4561-99c1-01ac9919e150" />
+        <ul id="af3a0b38-84b5-4a8b-8005-7f9c7d404c35" class="bulleted-list">
+          <li style="list-style-type: disc">2022.07 ~ 현 재 삼성 청년 SW 아카데미 8기 재학중</li>
+        </ul>
+        <ul id="d6e5e045-9204-4f38-a9e5-a44006775cbd" class="bulleted-list">
+          <li style="list-style-type: disc">2021.08 ~ 2021.11 멋쟁이 사자처럼 인공지능 통합과정</li>
+        </ul>
+        <ul id="10879cb8-7739-49a1-adb0-1a474ab67d48" class="bulleted-list">
+          <li style="list-style-type: disc">2020.08 ~ 2020.11 유네스코 청소년 온라인 평화 캠프</li>
+        </ul>
+        <h1 id="a17c24f5-e61f-42cd-8125-50d2018473a3" class="">🏆 Awards / Certificates</h1>
+        <hr id="c4ed6474-a9ee-4429-a76b-34bb7e635099" />
+        <ul id="2c8318e8-643d-46e7-a408-2f33c8049914" class="bulleted-list">
+          <li style="list-style-type: disc">2021.08 정보처리기사 (한국산업인력공단)</li>
+        </ul>
+        <ul id="6c546e5a-4ffd-4969-a1ac-3b70e11a0d80" class="bulleted-list">
+          <li style="list-style-type: disc">2019.08 사무자동화산업기사 (한국산업인력공단)</li>
+        </ul>
+        <ul id="c742f6c8-2dd0-4d08-9edc-2c191a8c2040" class="bulleted-list">
+          <li style="list-style-type: disc">2019.03 컴퓨터활용능력 1급 (대한상공회의소)</li>
+        </ul>
+        <h1 id="03e60dbd-d817-4698-aba9-89b0c89249e5" class="block-color-default">🎓 Education</h1>
+        <hr id="8b133cc7-1576-41ce-b90e-46a4e9ac52d4" />
+        <div id="928438bc-ef64-43c7-979f-47a0c83119a8" class="column-list">
+          <div id="eb49d554-09a4-4913-8b76-238edc28dff5" style="width: 50%" class="column">
+            <h2 id="af06e609-0643-45cd-9088-ea340f8bb2cf" class="">원광대학교</h2>
+            <p id="4b8b793f-dff0-4609-94fc-ecd1cbe78d1d" class="">2015.03. ~ 2022.02. (졸업)</p>
+          </div>
+          <div id="17423b16-251f-471e-bb6a-56c42cf289f7" style="width: 50%" class="column">
+            <ul id="6ef7aa98-d7df-40ac-b433-c567de552b63" class="bulleted-list">
+              <li style="list-style-type: disc">컴퓨터소프트웨어공학 전공</li>
+            </ul>
+            <ul id="dda2975d-5dc3-4263-8d29-2bcecad7ccb7" class="bulleted-list">
+              <li style="list-style-type: disc">디지털포렌식학과 연계전공</li>
+            </ul>
+            <p id="6b991246-654b-413e-b4d0-5f3bda6c87d5" class=""></p>
+            <p id="24ff667e-9c53-4aeb-9f31-013e2702e6c6" class=""></p>
+          </div>
+        </div>
+        <p id="c143ea92-2c38-4b4b-b9f2-5466d89afdb4" class=""></p>
+      </div>
+    </article>
+  </body>
 </html>
